@@ -15,7 +15,7 @@ interface AnchorButtonProps extends Props {
 
 export const Button = ({ children, type, className, ...rest }: ButtonProps | AnchorButtonProps) => {
   const buttonStyles =
-    'text-white text-md p-3 flex items-center justify-center text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg';
+    'text-md flex items-center justify-center p-3 text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg hover:scale-[1.01] focus:outline-none focus:ring-0 active:shadow-lg';
   if (type === 'anchor') {
     return (
       <a className={`${buttonStyles} ${className}`} {...rest}>

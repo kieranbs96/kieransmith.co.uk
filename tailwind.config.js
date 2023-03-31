@@ -10,11 +10,11 @@ module.exports = {
   ],
   theme: {
     container: {
-      sm: '600px',
-      md: '728px',
-      lg: '984px',
-      xl: '1200px',
-      '2xl': '1200px',
+      screens: {
+        mobile: '600px',
+        tablet: '900px',
+        desktop: '1200px',
+      },
     },
     extend: {
       fontFamily: {
