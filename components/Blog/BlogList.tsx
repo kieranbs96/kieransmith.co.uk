@@ -8,7 +8,7 @@ interface Props {
 
 function BlogList({ posts }: Props) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 gap-6 md:grid-cols-4">
       {posts.map((post) => (
         <PostPreview key={post._id} post={post} />
       ))}
@@ -22,7 +22,7 @@ interface PostPreview {
 
 function PostPreview({ post }: PostPreview) {
   return (
-    <div className="bg-white shadow-md rounded-lg max-w-sm mb-5 relative">
+    <div className="relative mb-5 max-w-sm rounded-lg bg-white shadow-md">
       <Link href={`/blog/${post.slug}`}>
         {post.mainImage && (
           <Image
@@ -34,12 +34,12 @@ function PostPreview({ post }: PostPreview) {
           />
         )}
       </Link>
-      <div className="absolute top-1 right-1 flex flex-col md:flex-row gap-y-2 md:gap-x-2">
+      <div className="absolute top-1 right-1 flex flex-col gap-y-2 md:flex-row md:gap-x-2">
         {post?.topics &&
           post.topics.map((topic) => (
             <div
               key={topic._id}
-              className="bg-yellow-400 text-center text-black px-3 py-1 rounded-full text-sm font-semibold"
+              className="rounded-full bg-slate-800 px-3 py-1 text-center text-sm font-semibold text-black"
             >
               <p>{topic.title}</p>
             </div>
@@ -47,8 +47,8 @@ function PostPreview({ post }: PostPreview) {
       </div>
       <div className="p-5">
         <div>
-          <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2">{post.title}</h5>
-          <p className="font-normal text-gray-700 mb-3">
+          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">{post.title}</h5>
+          <p className="mb-3 font-normal text-gray-700">
             {new Date(post._createdAt).toLocaleDateString('en-US', {
               day: 'numeric',
               month: 'long',
@@ -59,7 +59,7 @@ function PostPreview({ post }: PostPreview) {
 
         <Link
           href={`/blog/${post.slug}`}
-          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center"
+          className="inline-flex items-center rounded-lg bg-blue-700 px-3 py-2 text-center text-sm font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
         >
           Read more
         </Link>

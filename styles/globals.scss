@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import 'animations';
+@import 'gradients';
 
 :root {
   --black: hsla(30, 11%, 4%, 1);
@@ -19,14 +20,14 @@
   margin: 0;
 }
 
-html {
-  scrollbar-color: var(--yellow) var(--slate);
-  scrollbar-width: thin;
-}
+// html {
+//   scrollbar-color: var(--yellow) var(--slate);
+//   scrollbar-width: thin;
+// }
 
-::selection {
-  background: var(--yellow);
-}
+// ::selection {
+//   background: var(--yellow);
+// }
 
 html,
 body {

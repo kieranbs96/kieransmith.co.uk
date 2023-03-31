@@ -5,22 +5,22 @@ import { urlForImage } from 'lib/sanity.image';
 export const RichText = {
   types: {
     image: ({ value }: any) => (
-      <div className="relative w-full h-96 m-10 mx-auto">
+      <div className="relative m-10 mx-auto h-96 w-full">
         <Image className="object-contain" src={urlForImage(value).url()} alt="Image... TODO" fill />
       </div>
     ),
   },
   list: {
-    bullet: ({ children }: any) => <ul className="ml-10 py-5 list-disc space-y-5">{children}</ul>,
-    number: ({ children }: any) => <ol className="mt-lg list-decimal list-inside">{children}</ol>,
+    bullet: ({ children }: any) => <ul className="ml-10 list-disc space-y-5 py-5">{children}</ul>,
+    number: ({ children }: any) => <ol className="mt-lg list-inside list-decimal">{children}</ol>,
   },
   block: {
-    h1: ({ children }: any) => <h1 className="text-5xl py-10 font-bold">{children}</h1>,
-    h2: ({ children }: any) => <h1 className="text-4xl py-10 font-bold">{children}</h1>,
-    h3: ({ children }: any) => <h1 className="text-3xl py-10 font-bold">{children}</h1>,
-    h4: ({ children }: any) => <h1 className="text-2xl py-10 font-bold">{children}</h1>,
+    h1: ({ children }: any) => <h1 className="py-10 text-5xl font-bold">{children}</h1>,
+    h2: ({ children }: any) => <h1 className="py-10 text-4xl font-bold">{children}</h1>,
+    h3: ({ children }: any) => <h1 className="py-10 text-3xl font-bold">{children}</h1>,
+    h4: ({ children }: any) => <h1 className="py-10 text-2xl font-bold">{children}</h1>,
     blockquote: ({ children }: any) => (
-      <blockquote className="border-l-yellow-400 border-l-4 pl-5 py-5 my-5">{children}</blockquote>
+      <blockquote className="my-5 border-l-4 border-l-slate-800 py-5 pl-5">{children}</blockquote>
     ),
   },
   marks: {
@@ -31,7 +31,7 @@ export const RichText = {
         <Link
           href={value.href}
           rel={rel}
-          className="underline decoration-yellow-400 hover:decoration-black"
+          className="underline decoration-slate-800 hover:decoration-black"
         >
           {children}
         </Link>

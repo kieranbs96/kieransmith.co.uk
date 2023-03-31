@@ -1,4 +1,4 @@
-import {NextStudioHead} from 'next-sanity/studio/head'
+import { NextStudioHead } from 'next-sanity/studio/head';
 
 export default function CustomStudioHead() {
   return (
@@ -11,5 +11,5 @@ export default function CustomStudioHead() {
         href="https://www.sanity.io/static/images/favicons/favicon-32x32.png"
       />
     </>
-  )
+  );
 }

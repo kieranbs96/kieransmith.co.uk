@@ -1,8 +1,8 @@
 'use client';
 
-import { Inter } from '@next/font/google';
+import { League_Spartan } from '@next/font/google';
 
-const inter = Inter({
+const leagueSpartan = League_Spartan({
   weight: ['300', '400', '500', '600', '700'],
   subsets: ['latin'],
 });
@@ -12,7 +12,7 @@ function FontLoader() {
     <style jsx global>
       {`
         :root {
-          --inter-font: ${inter.style.fontFamily};
+          --league-spartan-font: ${leagueSpartan.style.fontFamily};
         }
       `}
     </style>
