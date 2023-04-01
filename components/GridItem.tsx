@@ -11,7 +11,7 @@ export default function GridItem({
   return (
     <div
       className={joinClassNames([
-        'rounded-lg p-4 transition hover:scale-[1.01] hover:shadow-lg',
+        'overflow-hidden rounded-3xl transition hover:scale-[1.01] hover:shadow-lg',
         className,
       ])}
     >
