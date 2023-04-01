@@ -6,7 +6,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head />
-      <body className="bg-slate-800 font-primary text-white">
+      <body className="bg-slate-800 font-sans text-white">
         <FontLoader />
         <Header />
         <main className="w-full">

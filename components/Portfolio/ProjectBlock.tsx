@@ -32,7 +32,7 @@ const ProjectBlock = ({ project }: Props) => {
           </span>
         </Button>
       </div>
-      <div className="-bottom-25 relative flex w-full items-center justify-center">
+      <div className="flex w-full items-center justify-center">
         <Image src={image} alt={`Screenshot of ${name}`} height={300} width={250} />
       </div>
     </>

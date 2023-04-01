@@ -1,16 +1,9 @@
 import { Button } from '../Button';
 import { GitHub, LinkedIn } from '../SocialIcons';
 
-const IntroBlock = () => {
+const FooterBlock = () => {
   return (
-    <div className="relative grid h-full grid-rows-4">
-      <div className="row-span-3">
-        <h1 className="text-3xl font-semibold">Hi, my name is Kieran</h1>
-        <h2 className="mt-4 text-lg">I am a Frontend Developer based in London, UK.</h2>
-        <p className="mb-6 text-lg">
-          I currently work at Global Radio building a radio & podcast streaming service.
-        </p>
-      </div>
+    <div className="relative h-full">
       <div className="flex flex-wrap items-center gap-2">
         <Button
           className="rounded-full bg-slate-700 px-6 hover:bg-slate-600"
@@ -49,4 +42,4 @@ const IntroBlock = () => {
   );
 };
 
-export default IntroBlock;
+export default FooterBlock;

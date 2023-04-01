@@ -1,7 +1,9 @@
 import GridItem from '../../components/GridItem';
 import IntroBlock from '../../components/Portfolio/IntroBlock';
-import Image from 'next/image';
+
 import ProjectBlock from '../../components/Portfolio/ProjectBlock';
+import FooterBlock from '../../components/Portfolio/FooterBlock';
+import Image from 'next/image';
 
 export default function Home() {
   const projects = [
@@ -15,19 +17,19 @@ export default function Home() {
       name: 'Global Radio',
       description: 'A radio & podcast streaming service.',
       href: 'https://globalplayer.com/',
-      image: 'https://via.placeholder.com/300',
+      image: '/global-player.png',
     },
     {
       name: 'Twitter Clone',
       description: 'A Twitter clone built with Next.js, Prisma & Tailwind CSS.',
       href: 'https://twitter-clone.kieransmith.co.uk/',
-      image: 'https://via.placeholder.com/300',
+      image: '/twitter-clone.png',
     },
   ];
 
   return (
     <div className="mb-4 grid grid-cols-1 gap-4 md:grid-cols-3">
-      <GridItem className="peach-wave  min-h-[300px] p-12 md:col-span-2">
+      <GridItem className="min-h-[300px] bg-gradient-to-r from-red-200 via-red-300  to-yellow-200 p-12 text-stone-700 md:col-span-2">
         <IntroBlock />
       </GridItem>
       <GridItem className="relative  bg-slate-700 p-0">
@@ -35,19 +37,22 @@ export default function Home() {
           src="/london.jpg"
           className="grayscale filter"
           alt="image of london"
-          height={300}
+          height={350}
           width={400}
         />
-        <div className="peach-wave absolute top-0 left-0 h-full w-full to-transparent  opacity-50 filter" />
+        <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 to-transparent  opacity-50 filter" />
       </GridItem>
       <GridItem className="bg-green-600">
         <ProjectBlock project={projects[0]} />
       </GridItem>
-      <GridItem className="min-h-[300px]  bg-yellow-500 md:col-span-2 md:row-span-2">
+      <GridItem className="bg-blue-500">
         <ProjectBlock project={projects[1]} />
       </GridItem>
-      <GridItem className="bg-blue-300">
+      <GridItem className="bg-blue-300 text-stone-700">
         <ProjectBlock project={projects[2]} />
+      </GridItem>
+      <GridItem className="bg-gradient-to-r from-red-200 via-red-300  to-yellow-200 p-12 md:col-span-3">
+        <FooterBlock />
       </GridItem>
     </div>
   );
