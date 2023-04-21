@@ -8,7 +8,7 @@ interface Props {
 
 function BlogList({ posts }: Props) {
   return (
-    <div className="grid grid-cols-1 gap-6 md:grid-cols-4">
+    <div className="grid grid-cols-1 gap-6 lg:grid-cols-4">
       {posts.map((post) => (
         <PostPreview key={post._id} post={post} />
       ))}
@@ -34,7 +34,7 @@ function PostPreview({ post }: PostPreview) {
           />
         )}
       </Link>
-      <div className="absolute top-1 right-1 flex flex-col gap-y-2 md:flex-row md:gap-x-2">
+      <div className="absolute top-1 right-1 flex flex-col gap-y-2 lg:flex-row lg:gap-x-2">
         {post?.topics &&
           post.topics.map((topic) => (
             <div

@@ -2,8 +2,9 @@ import GridItem from '../../components/GridItem';
 import IntroBlock from '../../components/Portfolio/IntroBlock';
 
 import ProjectBlock from '../../components/Portfolio/ProjectBlock';
-import FooterBlock from '../../components/Portfolio/FooterBlock';
+
 import Image from 'next/image';
+import SkillsBlock from '../../components/Portfolio/SkillsBlock';
 
 export default function Home() {
   const projects = [
@@ -28,11 +29,11 @@ export default function Home() {
   ];
 
   return (
-    <div className="mb-4 grid grid-cols-1 gap-4 md:grid-cols-3">
-      <GridItem className="min-h-[300px] bg-gradient-to-r from-red-200 via-red-300  to-yellow-200 p-12 text-stone-700 md:col-span-2">
+    <div className="mb-4 grid grid-cols-1 gap-4 lg:grid-cols-3">
+      <GridItem className="min-h-[300px] bg-gradient-to-r from-red-200 via-red-300  to-yellow-200 p-12 text-stone-700 lg:col-span-2">
         <IntroBlock />
       </GridItem>
-      <GridItem className="relative  bg-slate-700 p-0">
+      <GridItem className="relative  hidden bg-slate-700 p-0 lg:block">
         <Image
           src="/london.jpg"
           className="grayscale filter"
@@ -51,8 +52,8 @@ export default function Home() {
       <GridItem className="bg-blue-300 text-stone-700">
         <ProjectBlock project={projects[2]} />
       </GridItem>
-      <GridItem className="bg-gradient-to-r from-red-200 via-red-300  to-yellow-200 p-12 md:col-span-3">
-        <FooterBlock />
+      <GridItem className="bg-gradient-to-r from-red-200 via-red-300  to-yellow-200 p-12 lg:col-span-3">
+        <SkillsBlock />
       </GridItem>
     </div>
   );
