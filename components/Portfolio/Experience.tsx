@@ -101,21 +101,6 @@ export default function Experience() {
           </li>
         ))}
       </ul>
-
-      <Link
-        target="_blank"
-        aria-label="View Full Résumé"
-        className="group inline-flex items-center gap-2 font-medium leading-tight text-sky-200"
-        href="https://docs.google.com/document/d/1SrjgdxkoMGls5e3nOPQBDnhMV6K4XVgDUewDuK5NhBo/edit?usp=sharing"
-      >
-        <span className="border-b border-transparent pb-px transition group-hover:border-sky-300 motion-reduce:transition-none">
-          View Full Résumé
-        </span>
-        <Icon
-          name="move-right"
-          className="transition-transform group-hover:translate-x-2 group-focus-visible:translate-x-2 motion-reduce:transition-none"
-        />
-      </Link>
     </>
   );
 }

@@ -32,21 +32,36 @@ const Intro = () => {
           <Icon name="github" size={28} />
         </Link>
       </div>
-
-      <a
-        aria-label="View Full Résumé"
-        className="group mt-8 inline-flex items-center gap-2 font-medium leading-tight text-sky-200"
-        href="#projects"
-      >
-        <span className="border-b border-transparent pb-px transition group-hover:border-sky-300 motion-reduce:transition-none">
-          View Projects
-        </span>
-        <Icon
-          name="move-right"
-          size={28}
-          className="transition-transform group-hover:translate-x-2 group-focus-visible:translate-x-2 motion-reduce:transition-none"
-        />
-      </a>
+      <div className="flex flex-col">
+        <Link
+          target="_blank"
+          aria-label="View Full Résumé"
+          className="group mt-8 inline-flex items-center gap-2 font-medium leading-tight text-sky-200"
+          href="https://docs.google.com/document/d/1SrjgdxkoMGls5e3nOPQBDnhMV6K4XVgDUewDuK5NhBo/edit?usp=sharing"
+        >
+          <span className="border-b border-transparent pb-px transition group-hover:border-sky-300 motion-reduce:transition-none">
+            View Full Résumé
+          </span>
+          <Icon
+            name="move-right"
+            className="transition-transform group-hover:translate-x-2 group-focus-visible:translate-x-2 motion-reduce:transition-none"
+          />
+        </Link>
+        <a
+          aria-label="View Full Résumé"
+          className="group mt-4 inline-flex items-center gap-2 font-medium leading-tight text-sky-200"
+          href="#projects"
+        >
+          <span className="border-b border-transparent pb-px transition group-hover:border-sky-300 motion-reduce:transition-none">
+            View Projects
+          </span>
+          <Icon
+            name="move-right"
+            size={28}
+            className="transition-transform group-hover:translate-x-2 group-focus-visible:translate-x-2 motion-reduce:transition-none"
+          />
+        </a>
+      </div>
     </div>
   );
 };
