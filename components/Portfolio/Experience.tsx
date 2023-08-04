@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import Icon from '../Icon';
+import { Badge } from '../ui/badge';
 
 const experiences = [
   {
@@ -88,13 +89,11 @@ export default function Experience() {
                 </div>
               </h3>
               <p className="mt-2 text-sm leading-normal">{experience.description}</p>
-              <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
+              <ul className="mt-3 flex flex-wrap gap-1.5" aria-label="Technologies used">
                 {experience.technologies.map((technology) => (
-                  <li key={technology} className="mr-1.5 mt-2">
-                    <div className="flex items-center rounded-full bg-sky-400/10 px-3 py-1 text-xs font-medium leading-5 text-sky-300 ">
-                      {technology}
-                    </div>
-                  </li>
+                  <Badge key={technology} className=" bg-sky-400/10 text-sky-300 ">
+                    {technology}
+                  </Badge>
                 ))}
               </ul>
             </div>

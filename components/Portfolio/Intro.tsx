@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Icon from '../Icon';
+import { Separator } from '../ui/separator';
 
 const Intro = () => {
   return (
@@ -7,15 +8,15 @@ const Intro = () => {
       <h1 className="text-4xl font-bold tracking-tight text-sky-200 sm:text-5xl">
         <a href="/">Kieran Smith</a>
       </h1>
-      <h2 className="mt-3 mb-4 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
+      <h2 className="mt-3 mb-4 inline-flex text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
         Frontend Engineer at Global
       </h2>
-      <p className="mb-4">
+      <p>
         An ambitious web developer based in London with over 7 years in development experience and 4
         years of React experience.
       </p>
-
-      <div className="mt-8 flex flex-wrap items-center gap-4">
+      <Separator className="my-8 bg-sky-200/50" />
+      <div className=" flex flex-wrap items-center gap-4">
         <Link className="hover:text-sky-300" href="mailto:kieranbs96@gmail.com" target="_blank">
           <Icon name="mail" size={28} />
         </Link>
