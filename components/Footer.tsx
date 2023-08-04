@@ -1,4 +1,4 @@
-const FooterBlock = () => {
+const Footer = () => {
   return (
     <div className="relative h-full">
       <div className="flex flex-wrap items-center gap-2">...</div>
@@ -6,4 +6,4 @@ const FooterBlock = () => {
   );
 };
 
-export default FooterBlock;
+export default Footer;

@@ -12,19 +12,6 @@ function Header() {
             Kieran
           </Link>
         </div>
-
-        <ul className="flex list-none flex-row space-x-4 lg:ml-auto">
-          {/* <li className="inline-block">
-            <Link href="/blog">
-              Blog
-            </Link>
-          </li>
-          <li className="inline-block">
-            <a href="#projects">
-              Projects
-            </a>
-          </li> */}
-        </ul>
       </div>
     </header>
   );

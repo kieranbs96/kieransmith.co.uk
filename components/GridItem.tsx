@@ -1,5 +1,5 @@
-import { joinClassNames } from 'lib/helpers';
 import React from 'react';
+import { cn } from '~/lib/utils';
 
 export default function GridItem({
   children,
@@ -10,10 +10,10 @@ export default function GridItem({
 }) {
   return (
     <div
-      className={joinClassNames([
+      className={cn(
         'overflow-hidden rounded-3xl transition hover:scale-[1.01] hover:shadow-lg',
-        className,
-      ])}
+        className
+      )}
     >
       {children}
     </div>

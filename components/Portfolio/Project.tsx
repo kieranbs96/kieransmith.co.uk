@@ -1,5 +1,7 @@
 import Image from 'next/image';
-import { Button } from '../Button';
+import Link from 'next/link';
+import Icon from '../Icon';
+import { Button } from '../ui/button';
 
 interface Props {
   project: {
@@ -10,7 +12,7 @@ interface Props {
   };
 }
 
-const ProjectBlock = ({ project }: Props) => {
+const Project = ({ project }: Props) => {
   const { name, description, image, href } = project;
 
   return (
@@ -21,15 +23,13 @@ const ProjectBlock = ({ project }: Props) => {
           <p className="text-md">{description}</p>
         </div>
 
-        <Button
-          type="anchor"
-          href={href}
-          className="row-span-2 self-start justify-self-end rounded-full bg-white hover:bg-gray-200"
-          target="_blank"
-        >
-          <span className="flex h-5 w-5 -rotate-45 items-center justify-center font-sans font-bold text-black">
-            →
-          </span>
+        <Button className="row-span-2 self-start justify-self-end rounded-full bg-white p-2 hover:bg-gray-200">
+          <Link href={href} target="_blank">
+            <Icon
+              name="arrow-up-right"
+              className="flex h-5 w-5 items-center justify-center font-sans font-bold text-black"
+            />
+          </Link>
         </Button>
       </div>
       <div className="flex w-full items-center justify-center">
@@ -39,4 +39,4 @@ const ProjectBlock = ({ project }: Props) => {
   );
 };
 
-export default ProjectBlock;
+export default Project;

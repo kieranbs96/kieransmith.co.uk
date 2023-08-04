@@ -21,11 +21,11 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "~/*": ["./*"]
     }
   },
   "types": ["react/next"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "prettier.config.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "prettier.config.js", "components/Footer.tsx"],
   "exclude": ["node_modules"],
   "files": ["@types/block-content-to-react.d.ts", "@types/sanity-schema.d.ts"]
 }

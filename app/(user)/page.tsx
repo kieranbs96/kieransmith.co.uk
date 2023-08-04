@@ -1,10 +1,7 @@
 import GridItem from '../../components/GridItem';
-import IntroBlock from '../../components/Portfolio/IntroBlock';
-
-import ProjectBlock from '../../components/Portfolio/ProjectBlock';
-
-import Image from 'next/image';
-import SkillsBlock from '../../components/Portfolio/SkillsBlock';
+import Intro from '../../components/Portfolio/Intro';
+import Project from '../../components/Portfolio/Project';
+import Experience from '../../components/Portfolio/Experience';
 
 export default function Home() {
   const projects = [
@@ -26,35 +23,37 @@ export default function Home() {
       href: 'https://twitter-clone.kieransmith.co.uk/',
       image: '/twitter-clone.png',
     },
+    {
+      name: 'Lake Side RPG',
+      description: 'A website for a game server built with React, Drizzle & Tailwind CSS.',
+      href: 'https://lakesiderpg.com/',
+      image: '',
+    },
   ];
 
   return (
-    <div className="mb-4 grid grid-cols-1 gap-4 lg:grid-cols-3">
-      <GridItem className="min-h-[300px] bg-gradient-to-r from-red-200 via-red-300  to-yellow-200 p-12 text-stone-700 lg:col-span-2">
-        <IntroBlock />
-      </GridItem>
-      <GridItem className="relative  hidden bg-slate-700 p-0 lg:block">
-        <Image
-          src="/london.jpg"
-          className="grayscale filter"
-          alt="image of london"
-          height={350}
-          width={400}
-        />
-        <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 to-transparent  opacity-50 filter" />
-      </GridItem>
-      <GridItem className="bg-green-600">
-        <ProjectBlock project={projects[0]} />
-      </GridItem>
-      <GridItem className="bg-blue-500">
-        <ProjectBlock project={projects[1]} />
-      </GridItem>
-      <GridItem className="bg-blue-300 text-stone-700">
-        <ProjectBlock project={projects[2]} />
-      </GridItem>
-      <GridItem className="bg-gradient-to-r from-red-200 via-red-300  to-yellow-200 p-12 lg:col-span-3">
-        <SkillsBlock />
-      </GridItem>
+    <div className="mb-4 grid grid-cols-1 gap-y-8 gap-x-4 lg:grid-cols-6 lg:gap-y-12">
+      <div className="col-span-6 p-6 lg:col-span-3">
+        <Intro />
+      </div>
+      <div className="col-span-6 flex flex-col gap-8 p-6 lg:col-span-3">
+        <Experience />
+      </div>
+
+      <div className="col-span-6 grid grid-cols-1 gap-4 lg:grid-cols-3">
+        <h2 id="projects" className="sr-only col-span-3 text-2xl font-bold text-slate-50">
+          Projects
+        </h2>
+        <GridItem className="col-span-3 bg-green-600 lg:col-span-1">
+          <Project project={projects[0]} />
+        </GridItem>
+        <GridItem className="col-span-3 bg-blue-500 lg:col-span-1">
+          <Project project={projects[1]} />
+        </GridItem>
+        <GridItem className="col-span-3 bg-blue-300 text-stone-700 lg:col-span-1">
+          <Project project={projects[2]} />
+        </GridItem>
+      </div>
     </div>
   );
 }
