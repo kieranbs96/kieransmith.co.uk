@@ -5,6 +5,7 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
+  reactStrictMode: true,
   images: {
     domains: ['cdn.sanity.io', 'via.placeholder.com'],
   },
