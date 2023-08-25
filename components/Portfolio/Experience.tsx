@@ -1,16 +1,17 @@
-import Link from 'next/link';
 import React from 'react';
-import Icon from '../Icon';
 import { Badge } from '../ui/badge';
+import { Link } from 'lucide-react';
 
 const experiences = [
   {
     jobTitle: 'Frontend Engineer',
     name: 'Global',
     employerLink: 'https://www.globalplayer.com',
-    dates: 'Jun 2021 — Present',
+    linkDisplay: 'www.globalplayer.com',
+    from: 'Jun 2021',
+    to: 'Present',
     description:
-      'Building new features for and maintaining the Global Player web app which is built with Next.js with TypeScript and integration tested with Jest with React Testing Library and Mock Service Worker. Working with a large team of developers and designers to build new features and improve performance. Also had opportunities to work on the backend with Python and GraphQL.',
+      'Developing and enhancing features for the Global Player web application, constructed using Next.js and TypeScript. Proficiently conducting integration tests employing Jest, React Testing Library, and Mock Service Worker. Collaborating seamlessly within an extensive team of developers and designers to deliver novel functionalities and optimize overall performance. Additionally, gained valuable exposure to backend operations involving Python and GraphQL.',
     technologies: [
       'React',
       'Next.js',
@@ -26,27 +27,33 @@ const experiences = [
     jobTitle: 'Frontend Engineer',
     name: 'Education First',
     employerLink: 'https://www.ef.com',
-    dates: 'July 2019 — June 2021',
+    linkDisplay: 'www.ef.com',
+    from: 'July 2019',
+    to: 'June 2021',
     description:
-      'Maintaining a large React codebase containing many micro-sites built with a mixture of Next.js and Gatsby including the main EF website. Working with a large team of developers and designers to build new features and improve performance.',
+      'Proficiently managing an extensive React codebase, encompassing numerous micro-sites developed using a combination of Next.js and Gatsby, including the primary EF website. Collaborating seamlessly within a sizable team of developers and designers to drive the creation of various functionalities and enhancements in performance.',
     technologies: ['React', 'Gatsby', 'TypeScript', 'Next.js', 'Storybook'],
   },
   {
     jobTitle: 'Frontend Engineer',
     name: 'Conversion',
     employerLink: 'https://www.conversion.com',
-    dates: 'May 2018 — July 2019',
+    linkDisplay: 'www.conversion.com',
+    from: 'May 2018',
+    to: 'July 2019',
     description:
-      'Building features and tracking performance for large clients such as Canon, Dominos & Just Eat using Javascript to test though A/B testing using services like Conversion, Qubit & VWO',
+      "Developing functionalities and performance monitoring for prominent clients including Canon, Domino's, and Just Eat. Leveraging JavaScript expertise to execute A/B testing through platforms such as Conversion, Qubit, and VWO.",
     technologies: ['JavaScript', 'A/B Testing', 'CSS'],
   },
   {
     jobTitle: 'Junior Web Developer',
     name: 'SellerDeck Ltd',
     employerLink: 'https://www.sellerdeck.co.uk',
-    dates: 'Aug 2015 — May 2018',
+    linkDisplay: 'www.sellerdeck.co.uk',
+    from: 'Aug 2015',
+    to: 'May 2018',
     description:
-      "Previously working as a 3rd line support engineer for SellerDeck, I moved into development in 2015 in an in-house role. I worked on a variety of projects for clients using the SellerDeck platform. Most projects involved producing bespoke websites for clients using SellerDeck's templating language similar to PHP. Also worked with Magento and WordPress.",
+      "Transitioned from a role as a 3rd line support engineer at SellerDeck to pursue a development career in 2015, assuming an in-house position. Focused on diverse client projects utilizing the SellerDeck platform. Proficiently delivered customized websites employing SellerDeck's templating language, similar to PHP, in addition to collaborating with Magento and WordPress.",
     technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'jQuery'],
   },
 ];
@@ -65,10 +72,11 @@ export default function Experience() {
           >
             <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-700/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
             <header
-              className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2"
+              className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-400 sm:col-span-2"
               aria-label="July to December 2015"
             >
-              {experience.dates}
+              {experience.from}
+              <br />— {experience.to}
             </header>
             <div className="z-10 sm:col-span-6">
               <h3 className="font-medium leading-snug text-slate-200">
@@ -88,7 +96,11 @@ export default function Experience() {
                   </a>
                 </div>
               </h3>
+
               <p className="mt-2 text-sm leading-normal">{experience.description}</p>
+              <div className="mt-1 flex  items-center gap-2 text-sm leading-normal text-slate-200 group-hover:text-sky-300">
+                <Link size={16} /> {experience.linkDisplay}
+              </div>
               <ul className="mt-3 flex flex-wrap gap-1.5" aria-label="Technologies used">
                 {experience.technologies.map((technology) => (
                   <Badge key={technology} className=" bg-sky-400/10 text-sky-300 ">

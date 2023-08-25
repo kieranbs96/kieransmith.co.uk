@@ -20,7 +20,7 @@ export default function Home() {
     {
       name: 'Twitter Clone',
       description: 'A Twitter clone built with Next.js, Prisma & Tailwind CSS.',
-      href: 'https://twitter-clone.kieransmith.co.uk/',
+      href: 'https://github.com/kieranbs96/twitter-clone',
       image: '/twitter-clone.png',
     },
     {
@@ -32,7 +32,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="mb-4 grid grid-cols-1 gap-y-8 gap-x-4 lg:grid-cols-6 lg:gap-y-12">
+    <div className="mb-4 grid grid-cols-1 gap-x-4 gap-y-8 lg:grid-cols-6 lg:gap-y-12">
       <div className="col-span-6 p-6 lg:col-span-3">
         <Intro />
       </div>
