@@ -4,7 +4,7 @@ import { Separator } from '../ui/separator';
 
 const Intro = () => {
   return (
-    <div className="">
+    <div>
       <h1 className="text-4xl font-bold tracking-tight text-sky-200 sm:text-5xl">
         <a href="/">Kieran Smith</a>
       </h1>

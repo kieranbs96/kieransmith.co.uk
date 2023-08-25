@@ -33,7 +33,7 @@ export default function Home() {
 
   return (
     <div className="mb-4 grid grid-cols-1 gap-x-4 gap-y-8 lg:grid-cols-6 lg:gap-y-12">
-      <div className="col-span-6 p-6 lg:col-span-3">
+      {/* <div className="col-span-6 p-6 lg:col-span-3">
         <Intro />
       </div>
       <div className="col-span-6 flex flex-col gap-8 p-6 lg:col-span-3">
@@ -53,7 +53,7 @@ export default function Home() {
         <GridItem className="col-span-3 bg-blue-300 text-stone-700 lg:col-span-1">
           <Project project={projects[2]} />
         </GridItem>
-      </div>
+      </div> */}
     </div>
   );
 }
