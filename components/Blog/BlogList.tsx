@@ -1,7 +1,6 @@
 import { urlForImage } from 'lib/sanity.image';
 import Image from 'next/image';
 import Link from 'next/link';
-import { For } from 'million/react';
 
 interface Props {
   posts: Post[];
@@ -10,7 +9,9 @@ interface Props {
 function BlogList({ posts }: Props) {
   return (
     <div className="grid grid-cols-1 gap-6 lg:grid-cols-4">
-      <For each={posts}>{(post) => <PostPreview key={post._id} post={post} />}</For>
+      {posts.map((post) => (
+        <PostPreview key={post._id} post={post} />
+      ))}
     </div>
   );
 }

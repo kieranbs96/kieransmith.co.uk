@@ -1,28 +1,26 @@
-import { previewData } from 'next/headers';
 import { getPostBySlug } from 'lib/sanity.client';
-import PreviewSuspense from 'components/PreviewSuspense';
-import Banner from 'components/Banner';
+// import PreviewSuspense from 'components/PreviewSuspense';
 import { RichText } from 'components/PortableText/components';
 import { PortableText } from '@portabletext/react';
 import Image from 'next/image';
 import { urlForImage } from 'lib/sanity.image';
 
-export default async function BlogPost({ params }: PageProps) {
-  if (previewData()) {
-    return (
-      <PreviewSuspense
-        fallback={
-          <div role="status">
-            <p className="animate-pulse text-center text-lg text-[#f7ab0a]">
-              Loading preview data...
-            </p>
-          </div>
-        }
-      >
-        ...
-      </PreviewSuspense>
-    );
-  }
+export default async function BlogPost({ params }: { params: { slug: string } }) {
+  // if (previewData()) {
+  //   return (
+  //     <PreviewSuspense
+  //       fallback={
+  //         <div role="status">
+  //           <p className="animate-pulse text-center text-lg text-[#f7ab0a]">
+  //             Loading preview data...
+  //           </p>
+  //         </div>
+  //       }
+  //     >
+  //       ...
+  //     </PreviewSuspense>
+  //   );
+  // }
 
   const post = await getPostBySlug(params.slug);
   return (
